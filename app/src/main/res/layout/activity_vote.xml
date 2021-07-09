@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".VoteActivity">
+
+    <TextView
+        android:id="@+id/pollText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:maxLines="3"
+        android:padding="2dp"
+        android:text="Poll Text"
+        android:textAlignment="center"
+        android:textColor="#495057"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.162"
+        tools:text="Poll Text" />
+
+    <RadioGroup
+        android:id="@+id/voteGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="22dp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pollText"
+        android:padding="10dp"
+       >
+
+        <RadioButton
+            android:id="@+id/radio1"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Option1"
+            android:textColor="#495057"
+            android:textSize="18sp"
+            android:onClick="onRadioButtonClicked"
+            android:theme="@style/radioButton"/>
+
+        <RadioButton
+            android:id="@+id/radio2"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Option2"
+            android:textColor="#495057"
+            android:textSize="18sp"
+            android:onClick="onRadioButtonClicked"
+            android:theme="@style/radioButton"/>
+
+        <RadioButton
+            android:id="@+id/radio3"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Option3"
+            android:textColor="#495057"
+            android:textSize="18sp"
+            android:onClick="onRadioButtonClicked"
+            android:theme="@style/radioButton"/>
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/voteBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="100dp"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/btn_bgrnd"
+        android:text="VOTE"
+        android:textAlignment="center"
+        android:textColor="#fff"
+        android:textSize="15sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/voteGroup" />
+</androidx.constraintlayout.widget.ConstraintLayout>
